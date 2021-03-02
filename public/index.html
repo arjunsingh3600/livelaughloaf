@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/main.js" defer></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <style>
+        html, body {
+        height: 100%;
+        }   
+        .bg1{
+            background-color: chocolate;
+        }
+        .bg2{
+            background-color: cornflowerblue;
+        }
+        .bg3{
+            background-color: darkgoldenrod;
+        }
+        .footer{
+            min-height: 60px;
+        }
+
+        .content{
+            
+            font-family: 'Lobster Two', Helvetica, sans-serif;
+            font-weight: lighter;
+            color:rgba(255, 255, 255,0.8);
+            font-size: 9rem;
+            transform: translate(0, 0);
+   
+        }
+        .fill{
+            background: rgb(237, 199, 155);
+            min-height: 100%;
+            height: 100%;
+           
+          
+        }
+        .outer{
+            border: 2px solid red;
+            overflow: none;
+            height: 250px;
+            width: 250px;
+        }
+        .word{
+            
+            width: 30%;
+            height: 70%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        }
+
+    </style>
+</head>
+  <body>
+    <div class = "container-flex fill ">
+
+        <div class="row justify-content-center h-75 ">
+            <div class="  col-12 d-flex align-items-center justify-content-center">
+                
+             <div class ="word w1 bg1" > 
+                <span class="content"> Live</span>
+             </div>
+             <div class ="word w2 bg2">
+                <span class="content"> Laugh</span>
+             </div>
+
+             <div class ="word w3 bg3">
+                <span class="content"> Loaf</span>  
+             </div>
+            
+              
+            </div>  
+        </div>
+        <div class="row h-25">
+                <div class="col-lg-12 align-self-end">
+                    <div class ="footer text-light "> 
+                        <italic>
+                        <p class=" text-left pt-3  "> Made by Arjun</p>
+                        <p class=" text-right"></p>
+                          </italic>
+                        
+                    </div>
+                </div>
+            
+        </div> 
+    </div>
+    
+  </body>
+</html>
