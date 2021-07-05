@@ -1,6 +1,9 @@
 $(document).ready(function() {
 
+
     var listItems = $(".word");
+    var wrapper = $(".word-wrapper");
+
     console.log(listItems);
 
     function change_word (element,new_word){
@@ -21,12 +24,18 @@ $(document).ready(function() {
     var handleClick = function(event){  
         
         var new_word ;
+        event.stopPropagation();    
         
+       if ( $(this).hasClass('word') ){
+           console.log(event.target)
 
         $.get( window.location+ 'word', function(data) {
+           
+
+    
             if(data.statusCode==200){
                 
-                 new_word = data.body.slice(2,-2);
+                 new_word = data.body;
                   
                  
                  
@@ -37,6 +46,10 @@ $(document).ready(function() {
             change_word($(this),new_word);
         });
 
+       }
+
+        
+
         
         
 
@@ -44,7 +57,58 @@ $(document).ready(function() {
 
     };
 
+    var handleClickWrapper = function(event){  
+        
+        var new_word ;
+        event.stopPropagation();    
+        
+       if ( $(this).hasClass('word-wrapper') ){
+
+
+
+           $.get( window.location+ 'wordAll', function(data) {
+           
+
+    
+            if(data.statusCode==200){
+                
+                 new_word = data.body;
+                  
+                 
+                 
+            }
+
+        }).done(()=>{
+            var index =0;
+            $(this).children().each(function()
+            {
+                change_word($(this),new_word[index++]);
+               
+            }
+            );
+            
+          
+            
+        });
+
+       }
+
+
+       };
+        
+
+        
+        
+
+
+
+
+
     listItems.on( 'click', handleClick);
+
+    wrapper.on( 'click', handleClickWrapper);
+
+
 
 
     
