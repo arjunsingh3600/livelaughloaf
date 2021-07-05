@@ -1,3 +1,3 @@
-A pointless pedagoical excercise in bootstrap and templating
+Random aesthetic words
 
 Version 1.0
